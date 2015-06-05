@@ -78,10 +78,11 @@ int loseCounterInt = 0;
     newGameAlert.tag = 1;
     [newGameAlert show];
 }
+
 -(void)alertView:(UIAlertView *)alertview clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (alertview.tag == 1) {
-        NSLog(@"clicked at index %i",buttonIndex);
+        NSLog(@"clicked at index %li",(long)buttonIndex);
         if(buttonIndex == [alertview firstOtherButtonIndex]) {
             [self pressedResetGame:self];
             [self pressedNewGameAlert:self];
@@ -95,8 +96,12 @@ int loseCounterInt = 0;
             NSLog(@"start new game after winning");
             //reset board here
         }
+        else{
+            [self lockDownKeyBoard];
+        }
     }
 }
+
 -(IBAction)pressedNewGameAlert:(id)sender {
     NSLog(@"pressed new game alert");
     _wordArray = [self convertCSVStringToArray:[self readBundleFileToString:@"AppleWordSet2" ofType:@"csv"]];
@@ -133,6 +138,7 @@ int loseCounterInt = 0;
     }
     return characters;
 }
+
 -(void)setAnswerLabelUnhide:(NSString *)name {
     
     NSInteger nameLth = name.length;
@@ -235,9 +241,11 @@ int loseCounterInt = 0;
         
         NSLog(@"you have failed %i times",loseCounterInt);
     }
+    //answerWord = [answerWord uppercaseString];
+    NSString *loseResponseString =[NSString stringWithFormat:@"The word was %@. Do you want to start a new game?",answerWord.uppercaseString];
     if (loseCounterInt ==10) {
         UIAlertView *loseGameAlert = [[UIAlertView alloc] initWithTitle:@"You LOSE!"
-                                                                   message:@"Do you want to start a new game?" delegate:self cancelButtonTitle:@"Cancel"
+                                                                   message:loseResponseString delegate:self cancelButtonTitle:@"Cancel"
                                                          otherButtonTitles:@"Start",nil];
         loseGameAlert.tag = 2;
         [loseGameAlert show];
@@ -325,6 +333,13 @@ int loseCounterInt = 0;
     }
 
 }
+
+- (void)setButtonValues:(UIButton *)key withString:(NSString *)letterName {
+    [key setUserInteractionEnabled:true];
+    [key setTitle:letterName forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
 -(IBAction)pressedResetGame:(id)sender {
     [_answerLabel1 setHidden:true];
     [_answerLabel2 setHidden:true];
@@ -361,6 +376,8 @@ int loseCounterInt = 0;
     loseCounterInt = 0;
     winCounterInt = 0;
     
+    // *** Repeat next line for other 25 keys
+    [self setButtonValues:_keyA withString:@"A"];
     //undisable key board
     UIButton *key = _keyA;
     [key setUserInteractionEnabled:true];
@@ -496,24 +513,7 @@ int loseCounterInt = 0;
     
 
 }
-
-#pragma mark - Core Methods
-
-- (NSString *)readBundleFileToString:(NSString *)filename ofType:(NSString *)type {
-    NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:type];
-    return [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-}
-
-- (NSArray *)convertCSVStringToArray:(NSString *)csvString {
-    NSString *cleanString = [[csvString componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
-    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@","];
-    return [cleanString componentsSeparatedByCharactersInSet:set];
-}
-
-
-#pragma mark - life cycle methods
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void) lockDownKeyBoard {
     UIButton *key = _keyA;
     [key setUserInteractionEnabled:false];
     
@@ -591,7 +591,28 @@ int loseCounterInt = 0;
     
     key = _keyZ;
     [key setUserInteractionEnabled:false];
-    // Do any additional setup after loading the view, typically from a nib.
+
+}
+
+#pragma mark - Core Methods
+
+- (NSString *)readBundleFileToString:(NSString *)filename ofType:(NSString *)type {
+    NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:type];
+    return [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+}
+
+- (NSArray *)convertCSVStringToArray:(NSString *)csvString {
+    NSString *cleanString = [[csvString componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
+    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@","];
+    return [cleanString componentsSeparatedByCharactersInSet:set];
+}
+
+
+#pragma mark - life cycle methods
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self lockDownKeyBoard];
+        // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {

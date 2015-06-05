@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61B4E6011B20CE1000E5A69A /* AppleWordSet2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6001B20CE1000E5A69A /* AppleWordSet2.csv */; };
+		61B4E6031B20CE1F00E5A69A /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6021B20CE1F00E5A69A /* Images */; };
 		61E7E0471B20C1BA006F8289 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7E0461B20C1BA006F8289 /* main.m */; };
 		61E7E04A1B20C1BA006F8289 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7E0491B20C1BA006F8289 /* AppDelegate.m */; };
 		61E7E04D1B20C1BA006F8289 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7E04C1B20C1BA006F8289 /* ViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61B4E6001B20CE1000E5A69A /* AppleWordSet2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppleWordSet2.csv; sourceTree = "<group>"; };
+		61B4E6021B20CE1F00E5A69A /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		61E7E0411B20C1BA006F8289 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E7E0451B20C1BA006F8289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E7E0461B20C1BA006F8289 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				61E7E0491B20C1BA006F8289 /* AppDelegate.m */,
 				61E7E04B1B20C1BA006F8289 /* ViewController.h */,
 				61E7E04C1B20C1BA006F8289 /* ViewController.m */,
+				61B4E6021B20CE1F00E5A69A /* Images */,
+				61B4E6001B20CE1000E5A69A /* AppleWordSet2.csv */,
 				61E7E04E1B20C1BA006F8289 /* Main.storyboard */,
 				61E7E0511B20C1BA006F8289 /* Images.xcassets */,
 				61E7E0531B20C1BA006F8289 /* LaunchScreen.xib */,
@@ -199,9 +205,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B4E6031B20CE1F00E5A69A /* Images in Resources */,
 				61E7E0501B20C1BA006F8289 /* Main.storyboard in Resources */,
 				61E7E0551B20C1BA006F8289 /* LaunchScreen.xib in Resources */,
 				61E7E0521B20C1BA006F8289 /* Images.xcassets in Resources */,
+				61B4E6011B20CE1000E5A69A /* AppleWordSet2.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +426,7 @@
 				61E7E0661B20C1BA006F8289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61E7E0671B20C1BA006F8289 /* Build configuration list for PBXNativeTarget "HangmanTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +435,7 @@
 				61E7E0691B20C1BA006F8289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

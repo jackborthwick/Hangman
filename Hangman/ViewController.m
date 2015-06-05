@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (nonatomic,weak) NSArray *wordArray;
+@property (nonatomic,strong) IBOutlet NSLayoutConstraint *answerWidthConstraint;
 
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel1;
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel2;

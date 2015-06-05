@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>30A0DA89-6186-41B9-93DA-F1BA5EE2E50E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C9BA1D35F73FC7BC04BC2D410E7C95BEA795E915</key>
+		<string>https://github.com/jackborthwick/hangman</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hangman.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C9BA1D35F73FC7BC04BC2D410E7C95BEA795E915</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jackborthwick/hangman</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C9BA1D35F73FC7BC04BC2D410E7C95BEA795E915</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C9BA1D35F73FC7BC04BC2D410E7C95BEA795E915</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hangman</string>
+		</dict>
+	</array>
+</dict>
+</plist>

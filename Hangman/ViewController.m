@@ -28,6 +28,38 @@
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel15;
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel16;
 @property (nonatomic, strong) NSArray *answerArray;
+
+@property (nonatomic, weak) IBOutlet UIButton *keyA;
+@property (nonatomic, weak) IBOutlet UIButton *keyB;
+@property (nonatomic, weak) IBOutlet UIButton *keyC;
+@property (nonatomic, weak) IBOutlet UIButton *keyD;
+@property (nonatomic, weak) IBOutlet UIButton *keyE;
+@property (nonatomic, weak) IBOutlet UIButton *keyF;
+@property (nonatomic, weak) IBOutlet UIButton *keyG;
+@property (nonatomic, weak) IBOutlet UIButton *keyH;
+@property (nonatomic, weak) IBOutlet UIButton *keyI;
+@property (nonatomic, weak) IBOutlet UIButton *keyJ;
+@property (nonatomic, weak) IBOutlet UIButton *keyK;
+@property (nonatomic, weak) IBOutlet UIButton *keyL;
+@property (nonatomic, weak) IBOutlet UIButton *keyM;
+@property (nonatomic, weak) IBOutlet UIButton *keyN;
+@property (nonatomic, weak) IBOutlet UIButton *keyO;
+@property (nonatomic, weak) IBOutlet UIButton *keyP;
+@property (nonatomic, weak) IBOutlet UIButton *keyQ;
+@property (nonatomic, weak) IBOutlet UIButton *keyR;
+@property (nonatomic, weak) IBOutlet UIButton *keyS;
+@property (nonatomic, weak) IBOutlet UIButton *keyT;
+@property (nonatomic, weak) IBOutlet UIButton *keyU;
+@property (nonatomic, weak) IBOutlet UIButton *keyV;
+@property (nonatomic, weak) IBOutlet UIButton *keyW;
+@property (nonatomic, weak) IBOutlet UIButton *keyX;
+@property (nonatomic, weak) IBOutlet UIButton *keyY;
+@property (nonatomic, weak) IBOutlet UIButton *keyZ;
+
+@property (nonatomic, strong) IBOutlet UIImageView *hangmanImageView;
+@property (nonatomic, strong) NSArray *hangmanImagesArray;
+
+
 @end
 
 @implementation ViewController
@@ -51,6 +83,7 @@ int loseCounterInt = 0;
     if (alertview.tag == 1) {
         NSLog(@"clicked at index %i",buttonIndex);
         if(buttonIndex == [alertview firstOtherButtonIndex]) {
+            [self pressedResetGame:self];
             [self pressedNewGameAlert:self];
         }
     }
@@ -74,6 +107,20 @@ int loseCounterInt = 0;
     answerWord = _wordArray[randomWordIndex];
     [self setAnswerLabelUnhide:_wordArray[randomWordIndex]];
     _answerArray = [self convertStringToCharArray:answerWord];
+    UIImage *image1 = [UIImage imageNamed:@"Hangman01.png"];
+    UIImage *image2 = [UIImage imageNamed:@"Hangman02.png"];
+    UIImage *image3 = [UIImage imageNamed:@"Hangman03.png"];
+    UIImage *image4 = [UIImage imageNamed:@"Hangman04.png"];
+    UIImage *image5 = [UIImage imageNamed:@"Hangman05.png"];
+    UIImage *image6 = [UIImage imageNamed:@"Hangman06.png"];
+    UIImage *image7 = [UIImage imageNamed:@"Hangman07.png"];
+    UIImage *image8 = [UIImage imageNamed:@"Hangman08.png"];
+    UIImage *image9 = [UIImage imageNamed:@"Hangman09.png"];
+    UIImage *image10 = [UIImage imageNamed:@"Hangman10.png"];
+    _hangmanImagesArray = [[NSArray alloc] initWithObjects:image1,image2,image3,image4,image5,image6,image7,image8,image9,image10, nil];
+    NSLog(@"Array of Image: %lu", _hangmanImagesArray.count);
+//    _hangmanImagesArray= @[image1,image2,image3,image4,image5,image6,image7,image8,image9,image10];
+    
     
     
 }
@@ -173,11 +220,18 @@ int loseCounterInt = 0;
             NSLog(key.titleLabel.text);//changing the text but not on the screen.
         }
     }
+    
+    
     if (!wordContainsLetter) {//letter not found game state////
+        NSLog(@"Wrong Count: %lu", (unsigned long)_hangmanImagesArray.count);
+        
+        [_hangmanImageView setImage:_hangmanImagesArray[loseCounterInt]];
         loseCounterInt++;
         [key setTitle:@"X" forState:UIControlStateNormal];
         [key setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         //make images appear here
+        
+        
         
         NSLog(@"you have failed %i times",loseCounterInt);
     }
@@ -307,8 +361,138 @@ int loseCounterInt = 0;
     loseCounterInt = 0;
     winCounterInt = 0;
     
-    //remember to undisable key board
+    //undisable key board
+    UIButton *key = _keyA;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"A" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
+    key = _keyB;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"B" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
+    key = _keyC;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"C" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyD;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"D" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyE;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"E" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyF;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"F" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyG;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"G" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyH;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"H" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyI;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"I" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyJ;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"J" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyK;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"K" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyL;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"L" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyM;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"M" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyN;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"N" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyO;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"O" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyP;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"P" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyQ;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"Q" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyR;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"R" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyS;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"S" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyT;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"T" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyU;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"U" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyV;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"V" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyW;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"W" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyX;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"X" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyY;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"Y" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    key = _keyZ;
+    [key setUserInteractionEnabled:true];
+    [key setTitle:@"Z" forState:UIControlStateNormal];
+    [key setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [_hangmanImageView setImage:nil];
     
 
 }
@@ -330,6 +514,83 @@ int loseCounterInt = 0;
 #pragma mark - life cycle methods
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIButton *key = _keyA;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyB;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyC;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyD;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyE;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyF;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyG;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyH;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyI;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyJ;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyK;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyL;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyM;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyN;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyO;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyP;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyQ;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyR;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyS;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyT;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyU;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyV;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyW;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyX;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyY;
+    [key setUserInteractionEnabled:false];
+    
+    key = _keyZ;
+    [key setUserInteractionEnabled:false];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

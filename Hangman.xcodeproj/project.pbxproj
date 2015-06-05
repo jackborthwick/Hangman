@@ -8,7 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		61B4E6011B20CE1000E5A69A /* AppleWordSet2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6001B20CE1000E5A69A /* AppleWordSet2.csv */; };
-		61B4E6031B20CE1F00E5A69A /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6021B20CE1F00E5A69A /* Images */; };
+		61B4E60F1B222D7E00E5A69A /* Hangman01.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6051B222D7E00E5A69A /* Hangman01.png */; };
+		61B4E6101B222D7E00E5A69A /* Hangman02.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6061B222D7E00E5A69A /* Hangman02.png */; };
+		61B4E6111B222D7E00E5A69A /* Hangman03.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6071B222D7E00E5A69A /* Hangman03.png */; };
+		61B4E6121B222D7E00E5A69A /* Hangman04.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6081B222D7E00E5A69A /* Hangman04.png */; };
+		61B4E6131B222D7E00E5A69A /* Hangman05.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E6091B222D7E00E5A69A /* Hangman05.png */; };
+		61B4E6141B222D7E00E5A69A /* Hangman06.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E60A1B222D7E00E5A69A /* Hangman06.png */; };
+		61B4E6151B222D7E00E5A69A /* Hangman07.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E60B1B222D7E00E5A69A /* Hangman07.png */; };
+		61B4E6161B222D7E00E5A69A /* Hangman08.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E60C1B222D7E00E5A69A /* Hangman08.png */; };
+		61B4E6171B222D7E00E5A69A /* Hangman09.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E60D1B222D7E00E5A69A /* Hangman09.png */; };
+		61B4E6181B222D7E00E5A69A /* Hangman10.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B4E60E1B222D7E00E5A69A /* Hangman10.png */; };
 		61E7E0471B20C1BA006F8289 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7E0461B20C1BA006F8289 /* main.m */; };
 		61E7E04A1B20C1BA006F8289 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7E0491B20C1BA006F8289 /* AppDelegate.m */; };
 		61E7E04D1B20C1BA006F8289 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7E04C1B20C1BA006F8289 /* ViewController.m */; };
@@ -30,7 +39,16 @@
 
 /* Begin PBXFileReference section */
 		61B4E6001B20CE1000E5A69A /* AppleWordSet2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppleWordSet2.csv; sourceTree = "<group>"; };
-		61B4E6021B20CE1F00E5A69A /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		61B4E6051B222D7E00E5A69A /* Hangman01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman01.png; sourceTree = "<group>"; };
+		61B4E6061B222D7E00E5A69A /* Hangman02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman02.png; sourceTree = "<group>"; };
+		61B4E6071B222D7E00E5A69A /* Hangman03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman03.png; sourceTree = "<group>"; };
+		61B4E6081B222D7E00E5A69A /* Hangman04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman04.png; sourceTree = "<group>"; };
+		61B4E6091B222D7E00E5A69A /* Hangman05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman05.png; sourceTree = "<group>"; };
+		61B4E60A1B222D7E00E5A69A /* Hangman06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman06.png; sourceTree = "<group>"; };
+		61B4E60B1B222D7E00E5A69A /* Hangman07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman07.png; sourceTree = "<group>"; };
+		61B4E60C1B222D7E00E5A69A /* Hangman08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman08.png; sourceTree = "<group>"; };
+		61B4E60D1B222D7E00E5A69A /* Hangman09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman09.png; sourceTree = "<group>"; };
+		61B4E60E1B222D7E00E5A69A /* Hangman10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hangman10.png; sourceTree = "<group>"; };
 		61E7E0411B20C1BA006F8289 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E7E0451B20C1BA006F8289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E7E0461B20C1BA006F8289 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,6 +82,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61B4E6041B222D7E00E5A69A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				61B4E6051B222D7E00E5A69A /* Hangman01.png */,
+				61B4E6061B222D7E00E5A69A /* Hangman02.png */,
+				61B4E6071B222D7E00E5A69A /* Hangman03.png */,
+				61B4E6081B222D7E00E5A69A /* Hangman04.png */,
+				61B4E6091B222D7E00E5A69A /* Hangman05.png */,
+				61B4E60A1B222D7E00E5A69A /* Hangman06.png */,
+				61B4E60B1B222D7E00E5A69A /* Hangman07.png */,
+				61B4E60C1B222D7E00E5A69A /* Hangman08.png */,
+				61B4E60D1B222D7E00E5A69A /* Hangman09.png */,
+				61B4E60E1B222D7E00E5A69A /* Hangman10.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		61E7E0381B20C1BA006F8289 = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +124,8 @@
 				61E7E0491B20C1BA006F8289 /* AppDelegate.m */,
 				61E7E04B1B20C1BA006F8289 /* ViewController.h */,
 				61E7E04C1B20C1BA006F8289 /* ViewController.m */,
-				61B4E6021B20CE1F00E5A69A /* Images */,
 				61B4E6001B20CE1000E5A69A /* AppleWordSet2.csv */,
+				61B4E6041B222D7E00E5A69A /* Images */,
 				61E7E04E1B20C1BA006F8289 /* Main.storyboard */,
 				61E7E0511B20C1BA006F8289 /* Images.xcassets */,
 				61E7E0531B20C1BA006F8289 /* LaunchScreen.xib */,
@@ -205,11 +240,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B4E6031B20CE1F00E5A69A /* Images in Resources */,
+				61B4E6171B222D7E00E5A69A /* Hangman09.png in Resources */,
 				61E7E0501B20C1BA006F8289 /* Main.storyboard in Resources */,
+				61B4E60F1B222D7E00E5A69A /* Hangman01.png in Resources */,
+				61B4E6161B222D7E00E5A69A /* Hangman08.png in Resources */,
+				61B4E6131B222D7E00E5A69A /* Hangman05.png in Resources */,
+				61B4E6101B222D7E00E5A69A /* Hangman02.png in Resources */,
 				61E7E0551B20C1BA006F8289 /* LaunchScreen.xib in Resources */,
+				61B4E6181B222D7E00E5A69A /* Hangman10.png in Resources */,
 				61E7E0521B20C1BA006F8289 /* Images.xcassets in Resources */,
+				61B4E6141B222D7E00E5A69A /* Hangman06.png in Resources */,
+				61B4E6151B222D7E00E5A69A /* Hangman07.png in Resources */,
 				61B4E6011B20CE1000E5A69A /* AppleWordSet2.csv in Resources */,
+				61B4E6121B222D7E00E5A69A /* Hangman04.png in Resources */,
+				61B4E6111B222D7E00E5A69A /* Hangman03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
